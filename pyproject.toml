@@ -1,0 +1,10 @@
+[project]
+name = "gensim2-launch"
+version = "0.1.0"
+description = "Modal serverless deployment for GenSim2-fork pipeline with CUDA T4 GPU"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "modal>=1.4.2",
+    "ruff>=0.15.12",
+]
