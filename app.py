@@ -104,12 +104,20 @@ def run_pipeline(
 
     print("[*] Installing core dependencies...")
 
-    # Install iopath and pytorch3d
+    # Install iopath
     run_cmd("pip install -q iopath")
-    run_cmd(
-        "pip install -q pytorch3d -f "
-        "https://dl.fbaipublicfiles.com/pytorch3d/get_install_url.html"
-    )
+
+    # Try to install pytorch3d, but continue if it fails
+    print("[*] Attempting pytorch3d installation (optional)...")
+    try:
+        run_cmd(
+            "pip install pytorch3d -f "
+            "https://dl.fbaipublicfiles.com/pytorch3d/get_install_url.html",
+            check=False,
+        )
+        print("[+] pytorch3d installed")
+    except Exception as e:
+        print(f"[!] pytorch3d installation skipped: {e}")
 
     # Install requirements
     run_cmd("pip install -q -r requirements.txt")
