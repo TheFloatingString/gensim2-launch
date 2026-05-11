@@ -142,6 +142,9 @@ image = (
     .run_commands("pip install --force-reinstall --no-binary :all: noise")
 )
 
+vol = modal.Volume.from_name("gensim2-outputs", create_if_missing=True)
+VOLUME_PATH = "/gensim2-outputs"
+
 app = modal.App("gensim2-launch", image=image)
 
 
@@ -149,12 +152,12 @@ app = modal.App("gensim2-launch", image=image)
     gpu="T4",
     timeout=3600,
     secrets=[modal.Secret.from_name("gensim2-secrets")],
+    volumes={VOLUME_PATH: vol},
 )
 def run_pipeline(
     prompt_folder: str = "keypoint_pipeline_articulated_3stage",
     prompt_data_folder: str = "data_articulated/",
     num_tasks: int = 1,
-    output_folder: str = "logs/",
 ) -> dict:
     import subprocess
     from pathlib import Path
@@ -215,7 +218,7 @@ sys.argv = [
     "prompt_folder={prompt_folder}",
     "prompt_data_folder={prompt_data_folder}",
     "num_tasks={num_tasks}",
-    "output_folder={output_folder}",
+    "output_folder={VOLUME_PATH}/",
     "++use_gui=false",
     "++visual_solver_generation=false",
     "++reject_sampling=false",
@@ -234,12 +237,15 @@ exec(compile(_src, "{REPO_DIR}/gensim2/pipeline/run_pipeline.py", "exec"),
         env={**os.environ, "PYTHONPATH": REPO_DIR},
     )
 
-    output_path = Path(REPO_DIR) / output_folder
+    vol.commit()
+
+    output_path = Path(VOLUME_PATH)
     if result.returncode == 0:
         files = list(output_path.rglob("*")) if output_path.exists() else []
         return {
             "status": "success",
-            "output_folder": str(output_path),
+            "volume": "gensim2-outputs",
+            "output_folder": VOLUME_PATH,
             "num_output_files": len(files),
         }
     return {
