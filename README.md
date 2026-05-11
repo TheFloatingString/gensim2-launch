@@ -27,7 +27,7 @@ Value: sk-...your-key...
 ### Basic Run
 
 ```bash
-modal run app.py
+modal run launch.py
 ```
 
 ### With Custom Parameters
