@@ -6,19 +6,21 @@ from pathlib import Path
 # Define the Modal image with micromamba and CUDA support
 image = (
     modal.Image.debian_slim()
-    .apt_install([
-        "git",
-        "build-essential",
-        "libzmq3-dev",
-        "libffi-dev",
-        "libssl-dev",
-        "wget",
-        "curl",
-        "ca-certificates",
-        "libgl1-mesa-glx",
-        "libglib2.0-0",
-        "libxkbcommon0",
-    ])
+    .apt_install(
+        [
+            "git",
+            "build-essential",
+            "libzmq3-dev",
+            "libffi-dev",
+            "libssl-dev",
+            "wget",
+            "curl",
+            "ca-certificates",
+            "libgl1-mesa-glx",
+            "libglib2.0-0",
+            "libxkbcommon0",
+        ]
+    )
     .run_commands(
         "mkdir -p /tmp/mamba && cd /tmp/mamba && curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xj",
         "mv /tmp/mamba/bin/micromamba /usr/local/bin/micromamba && chmod +x /usr/local/bin/micromamba",
@@ -76,8 +78,12 @@ def run_pipeline(
         shutil.rmtree(repo_dir)
 
     subprocess.run(
-        ["git", "clone", "--recursive",
-         "https://github.com/TheFloatingString/GenSim2-fork.git"],
+        [
+            "git",
+            "clone",
+            "--recursive",
+            "https://github.com/TheFloatingString/GenSim2-fork.git",
+        ],
         cwd=work_dir,
         check=True,
         capture_output=True,
@@ -246,9 +252,9 @@ if __name__ == "__main__":
 
     # Run the wrapper
     pipeline_cmd = (
-        f'cd {repo_dir} && '
-        f'PYTHONPATH={repo_dir}:$PYTHONPATH '
-        f'python run_pipeline_wrapper.py'
+        f"cd {repo_dir} && "
+        f"PYTHONPATH={repo_dir}:$PYTHONPATH "
+        f"python run_pipeline_wrapper.py"
     )
 
     print(f"  Running pipeline...")

@@ -6,21 +6,23 @@ REPO_DIR = "/opt/GenSim2-fork"
 
 image = (
     modal.Image.from_registry("nvidia/cuda:12.4.1-devel-ubuntu22.04", add_python="3.11")
-    .apt_install([
-        "git",
-        "build-essential",
-        "libvulkan-dev",
-        "libvulkan1",
-        "wget",
-        "libgl1",
-        "libglib2.0-0",
-        "libglfw3",
-        "libffi-dev",
-        "libssl-dev",
-        "curl",
-        "ca-certificates",
-        "clang",
-    ])
+    .apt_install(
+        [
+            "git",
+            "build-essential",
+            "libvulkan-dev",
+            "libvulkan1",
+            "wget",
+            "libgl1",
+            "libglib2.0-0",
+            "libglfw3",
+            "libffi-dev",
+            "libssl-dev",
+            "curl",
+            "ca-certificates",
+            "clang",
+        ]
+    )
     .run_commands(
         "mkdir -p /etc/vulkan/icd.d",
         'echo \'{"file_format_version":"1.0.0","ICD":{"library_path":"libEGL_nvidia.so.0","api_version":"1.3.277"}}\''
@@ -34,97 +36,107 @@ image = (
         f"git clone --recursive {REPO_URL} {REPO_DIR}",
         f"cd {REPO_DIR} && pip install -e . || true",
     )
-    .pip_install([
-        "numpy<2",
-        "hydra-core==1.3.2",
-        "omegaconf",
-        "openai==0.28",
-        "pyyaml==6.0",
-        "pillow",
-        "opencv-python",
-        "transforms3d",
-        "tqdm",
-        "scikit-learn",
-        "sapien",
-        "trimesh",
-        "einops",
-        "sentence-transformers",
-        "wandb",
-    ])
-    .pip_install([
-        "ipython",
-        "ipdb",
-    ])
-    .pip_install([
-        "webcolors",
-    ])
-    .pip_install([
-        "drake==1.22.0",
-    ])
-    .pip_install([
-        "icecream",
-        "numpy",
-        "drake==1.22.0",
-        "matplotlib",
-        "opencv-python",
-        "colored",
-        "transforms3d",
-        "gym",
-        "pillow",
-        "meshcat",
-        "openai==0.28",
-        "ipdb",
-        # "open3d==0.16.0", # 0.16.0 is incompatible with the python version and other dependencies
-        "open3d",
-        "einops",
-        "dm-reverb",
-        "meshcat",
-        "tabulate",
-        "GPUtil",
-        "psutil",
-        "dotmap",
-        "zarr",
-        "transformers",
-        # "sim-web-visualizer",
-        "sapien==2.2.2",
-        "mplib==0.1.1",
-        "webcolors",
-        "chardet",
-        "tensorboard",
-        "imageio",
-        "hydra-core==1.3.2",
-        "hydra-submitit-launcher==1.1.5",
-        "shortuuid",
-        "multimethod",
-        # "chamferdist", # installing chamferdist causes some issues
-        "sentence_transformers",
-        "wandb",
-        "easydict",
-        "timm",
-        "tqdm",
-        # "scikit-learn==1.0.2",
-        "pickleshare==0.7.5",
-        "ninja==1.10.2.3",
-        "gdown",
-        "PyYAML==6.0",
-        "protobuf==3.19.4",
-        "termcolor==1.1.0",
-        # "h5py==3.6.0",
-        "pyvista",
-        "setuptools==63.1.0",
-        "Cython",
-        "pandas",
-        "deepspeed",
-        "numba",
-        "ray",
-        "diffusers",
-        "noise",
-        "webcolors",
-        "ftfy",
-        "imageio[ffmpeg]",
-        "gymnasium",
-        "trimesh",
-    ])
+    .pip_install(
+        [
+            "numpy<2",
+            "hydra-core==1.3.2",
+            "omegaconf",
+            "openai==0.28",
+            "pyyaml==6.0",
+            "pillow",
+            "opencv-python",
+            "transforms3d",
+            "tqdm",
+            "scikit-learn",
+            "sapien",
+            "trimesh",
+            "einops",
+            "sentence-transformers",
+            "wandb",
+        ]
+    )
+    .pip_install(
+        [
+            "ipython",
+            "ipdb",
+        ]
+    )
+    .pip_install(
+        [
+            "webcolors",
+        ]
+    )
+    .pip_install(
+        [
+            "drake==1.22.0",
+        ]
+    )
+    .pip_install(
+        [
+            "icecream",
+            "numpy",
+            "drake==1.22.0",
+            "matplotlib",
+            "opencv-python",
+            "colored",
+            "transforms3d",
+            "gym",
+            "pillow",
+            "meshcat",
+            "openai==0.28",
+            "ipdb",
+            # "open3d==0.16.0", # 0.16.0 is incompatible with the python version and other dependencies
+            "open3d",
+            "einops",
+            "dm-reverb",
+            "meshcat",
+            "tabulate",
+            "GPUtil",
+            "psutil",
+            "dotmap",
+            "zarr",
+            "transformers",
+            # "sim-web-visualizer",
+            "sapien==2.2.2",
+            "mplib==0.1.1",
+            "webcolors",
+            "chardet",
+            "tensorboard",
+            "imageio",
+            "hydra-core==1.3.2",
+            "hydra-submitit-launcher==1.1.5",
+            "shortuuid",
+            "multimethod",
+            # "chamferdist", # installing chamferdist causes some issues
+            "sentence_transformers",
+            "wandb",
+            "easydict",
+            "timm",
+            "tqdm",
+            # "scikit-learn==1.0.2",
+            "pickleshare==0.7.5",
+            "ninja==1.10.2.3",
+            "gdown",
+            "PyYAML==6.0",
+            "protobuf==3.19.4",
+            "termcolor==1.1.0",
+            # "h5py==3.6.0",
+            "pyvista",
+            "setuptools==63.1.0",
+            "Cython",
+            "pandas",
+            "deepspeed",
+            "numba",
+            "ray",
+            "diffusers",
+            "noise",
+            "webcolors",
+            "ftfy",
+            "imageio[ffmpeg]",
+            "gymnasium",
+            "trimesh",
+        ]
+    )
     .pip_install(["numpy<2"])
     .pip_install(["open3d==0.18.0"])
     .run_commands("pip install --force-reinstall --no-binary :all: noise")
@@ -149,7 +161,9 @@ def run_pipeline(
 
     openai_key = os.environ.get("OPENAI_KEY")
     if not openai_key:
-        raise ValueError("OPENAI_KEY not found. Set it via Modal secret 'gensim2-secrets'.")
+        raise ValueError(
+            "OPENAI_KEY not found. Set it via Modal secret 'gensim2-secrets'."
+        )
 
     # Write a launcher that runs in a single process so VK_ICD_FILENAMES stays
     # in effect after sapien's _vulkan_tricks.py has had its chance to override it.
