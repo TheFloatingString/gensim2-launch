@@ -217,6 +217,8 @@ sys.argv = [
     "num_tasks={num_tasks}",
     "output_folder={output_folder}",
     "++use_gui=false",
+    "++visual_solver_generation=false",
+    "++reject_sampling=false",
 ]
 with open("{REPO_DIR}/gensim2/pipeline/run_pipeline.py") as _f:
     _src = _f.read()
