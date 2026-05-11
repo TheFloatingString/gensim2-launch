@@ -211,6 +211,29 @@ class _NoopViewer:
 _sim_mod.Viewer = _NoopViewer
 _ctor_mod.Viewer = _NoopViewer
 
+# Patch visualize_actuation_pose to skip image capture (images unused when
+# visual_solver_generation=false) so KPAM success/failure is reported correctly.
+import gensim2.pipeline.sim_runner as _sr_mod
+from gensim2.env.create_env import create_gensim
+from gensim2.env.solver.kpam.kpam_planner import KPAMPlanner as _KPAMPlanner
+
+def _headless_visualize_actuation_pose(self, config, name, code, viz=True):
+    env = create_gensim(
+        task_name=name,
+        sim_type="Sapien",
+        task_code_input=code,
+        use_gui=True,
+        eval=False,
+    )
+    planner = _KPAMPlanner(env, config)
+    try:
+        actuation_qpos, kpam_success = planner.get_actuation_qpos()
+    except Exception:
+        kpam_success = False
+    return [], kpam_success
+
+_sr_mod.SimulationRunner.visualize_actuation_pose = _headless_visualize_actuation_pose
+
 # Run the pipeline script as __main__ so Hydra resolves config_path relative
 # to the script file rather than the calling module.
 sys.argv = [
@@ -241,12 +264,16 @@ exec(compile(_src, "{REPO_DIR}/gensim2/pipeline/run_pipeline.py", "exec"),
 
     output_path = Path(VOLUME_PATH)
     if result.returncode == 0:
-        files = list(output_path.rglob("*")) if output_path.exists() else []
+        files = (
+            [f for f in output_path.rglob("*") if f.is_file()]
+            if output_path.exists()
+            else []
+        )
         return {
             "status": "success",
             "volume": "gensim2-outputs",
             "output_folder": VOLUME_PATH,
-            "num_output_files": len(files),
+            "output_files": [str(f.relative_to(VOLUME_PATH)) for f in files],
         }
     return {
         "status": "failed",
