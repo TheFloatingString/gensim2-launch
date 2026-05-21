@@ -303,11 +303,37 @@ exec(compile(_src, "{REPO_DIR}/gensim2/pipeline/run_pipeline.py", "exec"),
 
 @app.local_entrypoint()
 def main(
-    prompt_folder: str = "keypoint_pipeline_articulated_3stage",
-    prompt_data_folder: str = "data_articulated/",
+    task: str = "articulated",
+    prompt_folder: str = "",
+    prompt_data_folder: str = "",
     num_tasks: int = 1,
 ):
+    tasks = {
+        "articulated": {
+            "prompt_folder": "keypoint_pipeline_articulated_3stage",
+            "prompt_data_folder": "data_articulated/",
+        },
+        "longhorizon": {
+            "prompt_folder": "keypoint_pipeline_longhorizon_topdown",
+            "prompt_data_folder": "data_longhorizon/",
+        },
+    }
+
+    if task not in tasks:
+        raise ValueError(
+            f"Unknown task '{task}'. Available: {', '.join(tasks.keys())}"
+        )
+
+    # Use explicit folders if provided, otherwise use task defaults
+    if not prompt_folder:
+        prompt_folder = tasks[task]["prompt_folder"]
+    if not prompt_data_folder:
+        prompt_data_folder = tasks[task]["prompt_data_folder"]
+
     print("[*] Starting GenSim2 pipeline on Modal...")
+    print(f"[*] Task: {task}")
+    print(f"[*] prompt_folder: {prompt_folder}")
+    print(f"[*] prompt_data_folder: {prompt_data_folder}")
     result = run_pipeline.remote(
         prompt_folder=prompt_folder,
         prompt_data_folder=prompt_data_folder,

@@ -24,25 +24,43 @@ Value: sk-...your-key...
 
 ## Usage
 
-### Basic Run
+### Basic Run (default: articulated task)
 
 ```bash
 modal run launch.py
 ```
 
+### Run Specific Task
+
+```bash
+modal run launch.py --task longhorizon
+```
+
+### Available Tasks
+
+- `articulated` (default): `keypoint_pipeline_articulated_3stage` + `data_articulated/`
+- `longhorizon`: `keypoint_pipeline_longhorizon_topdown` + `data_longhorizon/`
+
 ### With Custom Parameters
 
 ```bash
-modal run app.py \
-  --prompt-folder keypoint_pipeline_articulated_3stage \
-  --prompt-data-folder data_articulated/ \
+modal run launch.py --task longhorizon --num-tasks 5
+```
+
+Or override task folders explicitly:
+
+```bash
+modal run launch.py --task custom \
+  --prompt-folder my_pipeline \
+  --prompt-data-folder my_data/ \
   --num-tasks 1
 ```
 
 ### Parameters
 
-- `--prompt-folder`: Prompt folder name in GenSim2 prompts/
-- `--prompt-data-folder`: Data folder name in GenSim2 prompts/
+- `--task`: Task preset (articulated, longhorizon). Default: `articulated`
+- `--prompt-folder`: Prompt folder name in GenSim2 prompts/ (overrides task default)
+- `--prompt-data-folder`: Data folder name in GenSim2 prompts/ (overrides task default)
 - `--num-tasks`: Number of tasks to generate (default: 1)
 
 ## What Happens
@@ -69,8 +87,8 @@ modal run app.py \
 
 ## Files
 
-- `modal.py`: Main Modal app with T4 GPU function
-- `main.py`: Quick reference guide
+- `launch.py`: Main Modal app with T4 GPU function and task presets
+- `README.md`: This file
 - `pyproject.toml`: Project metadata
 
 ## Notes
