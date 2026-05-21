@@ -214,8 +214,8 @@ _ctor_mod.Viewer = _NoopViewer
 # Patch visualize_actuation_pose to skip image capture (images unused when
 # visual_solver_generation=false) so KPAM success/failure is reported correctly.
 import gensim2.pipeline.sim_runner as _sr_mod
-from gensim2.env.create_env import create_gensim
-from gensim2.env.solver.kpam.kpam_planner import KPAMPlanner as _KPAMPlanner
+from gensim2.env.create_task import create_gensim
+from gensim2.env.solver.planner import KPAMPlanner as _KPAMPlanner
 
 def _headless_visualize_actuation_pose(self, config, name, code, viz=True):
     env = create_gensim(
@@ -233,6 +233,26 @@ def _headless_visualize_actuation_pose(self, config, name, code, viz=True):
     return [], kpam_success
 
 _sr_mod.SimulationRunner.visualize_actuation_pose = _headless_visualize_actuation_pose
+
+# critic.reflection has a bug: 'reason' is uninitialized when all reflection
+# flags are False (language_reflection, visual_reflection, reject_sampling all off).
+import gensim2.pipeline.critic as _critic_mod
+_orig_reflection = _critic_mod.Critic.reflection
+def _patched_reflection(self, task, code=None, stage="task_creation", images=None,
+                        current_tasks=None, include_reason=False):
+    pass_reflection, reason = _orig_reflection(
+        self, task, code=code, stage=stage, images=images,
+        current_tasks=current_tasks, include_reason=include_reason
+    )
+    return pass_reflection, reason
+def _safe_reflection(self, task, code=None, stage="task_creation", images=None,
+                     current_tasks=None, include_reason=False):
+    try:
+        return _patched_reflection(self, task, code=code, stage=stage, images=images,
+                                   current_tasks=current_tasks, include_reason=include_reason)
+    except UnboundLocalError:
+        return True, ""
+_critic_mod.Critic.reflection = _safe_reflection
 
 # Run the pipeline script as __main__ so Hydra resolves config_path relative
 # to the script file rather than the calling module.
