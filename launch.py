@@ -158,6 +158,9 @@ def run_pipeline(
     prompt_folder: str = "keypoint_pipeline_articulated_3stage",
     prompt_data_folder: str = "data_articulated/",
     num_tasks: int = 1,
+    mode: str = "",
+    target_object_name: str = "",
+    target_task_name: str = "",
 ) -> dict:
     import subprocess
     from pathlib import Path
@@ -266,6 +269,13 @@ sys.argv = [
     "++visual_solver_generation=false",
     "++reject_sampling=false",
 ]
+if "{mode}":
+    sys.argv.append("++mode={mode}")
+if "{target_object_name}":
+    sys.argv.append("++target_object_name={target_object_name}")
+if "{target_task_name}":
+    sys.argv.append("++target_task_name={target_task_name}")
+
 with open("{REPO_DIR}/gensim2/pipeline/run_pipeline.py") as _f:
     _src = _f.read()
 exec(compile(_src, "{REPO_DIR}/gensim2/pipeline/run_pipeline.py", "exec"),
@@ -307,6 +317,9 @@ def main(
     prompt_folder: str = "",
     prompt_data_folder: str = "",
     num_tasks: int = 1,
+    mode: str = "",
+    target_object_name: str = "",
+    target_task_name: str = "",
 ):
     tasks = {
         "articulated": {
@@ -316,6 +329,11 @@ def main(
         "longhorizon": {
             "prompt_folder": "keypoint_pipeline_longhorizon_topdown",
             "prompt_data_folder": "data_longhorizon/",
+        },
+        "longhorizon_bottomup": {
+            "prompt_folder": "keypoint_pipeline_longhorizon_bottomup",
+            "prompt_data_folder": "data_longhorizon/",
+            "mode": "bottomup",
         },
     }
 
@@ -329,15 +347,24 @@ def main(
         prompt_folder = tasks[task]["prompt_folder"]
     if not prompt_data_folder:
         prompt_data_folder = tasks[task]["prompt_data_folder"]
+    if not mode and "mode" in tasks[task]:
+        mode = tasks[task]["mode"]
 
     print("[*] Starting GenSim2 pipeline on Modal...")
     print(f"[*] Task: {task}")
     print(f"[*] prompt_folder: {prompt_folder}")
     print(f"[*] prompt_data_folder: {prompt_data_folder}")
+    if target_object_name:
+        print(f"[*] target_object_name: {target_object_name}")
+    if target_task_name:
+        print(f"[*] target_task_name: {target_task_name}")
     result = run_pipeline.remote(
         prompt_folder=prompt_folder,
         prompt_data_folder=prompt_data_folder,
         num_tasks=num_tasks,
+        mode=mode,
+        target_object_name=target_object_name,
+        target_task_name=target_task_name,
     )
     print("\n[*] Result:")
     print(result)
