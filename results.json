@@ -1,0 +1,3010 @@
+[
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_22_35_00/prepare-breakfast_chat_log.txt",
+    "task": {
+      "task-name": "prepare-breakfast",
+      "task-description": "The goal is to prepare a breakfast scene by opening the oven, placing a bowl inside, and closing the oven door.",
+      "assets-used": [
+        "oven",
+        "bowl"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "rotate-oven-knob",
+        "task-description": "Open the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the bowl.",
+        "assets-used": [
+          "bowl"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the bowl inside the oven.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "push-oven-door",
+        "task-description": "Close the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_09_18/move-mug-into-drawer_chat_log.txt",
+    "task": {
+      "task-name": "move-mug-into-drawer",
+      "task-description": "Open the drawer, pick up the mug, place it inside the drawer, and close the drawer.",
+      "assets-used": [
+        "drawer",
+        "mug"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-drawer",
+        "task-description": "Open the drawer to create space for placing the mug inside.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the mug and make it between the gripper fingers.",
+        "assets-used": [
+          "mug"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper with the mug to the open drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-drawer",
+        "task-description": "Close the drawer after placing the mug inside.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_10_24/tidy-up-table_chat_log.txt",
+    "task": {
+      "task-name": "tidy-up-table",
+      "task-description": "Open the drawer, place the mug inside, and close the drawer.",
+      "assets-used": [
+        "drawer",
+        "mug"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-drawer",
+        "task-description": "Open the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the mug and make the mug between gripper fingers.",
+        "assets-used": [
+          "mug"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper above the drawer to place the mug inside.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-drawer",
+        "task-description": "Close the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_11_29/prepare-breakfast_chat_log.txt",
+    "task": {
+      "task-name": "prepare-breakfast",
+      "task-description": "Open the microwave, place the mug inside, and close the microwave door.",
+      "assets-used": [
+        "microwave",
+        "mug"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "rotate-microwave-door",
+        "task-description": "Rotate the microwave door open.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the mug and make the mug between gripper fingers.",
+        "assets-used": [
+          "mug"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the gripper into the microwave horizontally.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-microwave",
+        "task-description": "Close the microwave door.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_12_41/store-soup-in-drawer_chat_log.txt",
+    "task": {
+      "task-name": "store-soup-in-drawer",
+      "task-description": "Open the drawer, place the tomato soup can inside, and close the drawer.",
+      "assets-used": [
+        "drawer",
+        "tomato_soup_can"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-drawer",
+        "task-description": "Open the drawer to prepare for placing the soup can.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the tomato soup can to prepare for grasping.",
+        "assets-used": [
+          "tomato_soup_can"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper with the soup can to the open drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-drawer",
+        "task-description": "Close the drawer after placing the soup can inside.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_13_40/store-cutlery-in-drawer_chat_log.txt",
+    "task": {
+      "task-name": "store-cutlery-in-drawer",
+      "task-description": "Open the drawer, pick up the knife, place it inside the drawer, and close the drawer.",
+      "assets-used": [
+        "drawer",
+        "knife"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-thin-object",
+        "task-description": "Reach the knife and make the knife between gripper fingers.",
+        "assets-used": [
+          "knife"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "open-drawer",
+        "task-description": "Open the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper above the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-drawer",
+        "task-description": "Push the drawer to a fully closed position.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_14_39/organize-office-drawer_chat_log.txt",
+    "task": {
+      "task-name": "organize-office-drawer",
+      "task-description": "Open the drawer, place the rigid body object inside, and close the drawer.",
+      "assets-used": [
+        "drawer",
+        "marker"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-drawer",
+        "task-description": "Open a drawer",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-thin-object",
+        "task-description": "Reach a thin and long object.",
+        "assets-used": [
+          "marker"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper above the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-drawer",
+        "task-description": "Push the drawer to a fully close position",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_16_16/refrigerate-fruits_chat_log.txt",
+    "task": {
+      "task-name": "refrigerate-fruits",
+      "task-description": "Open the refrigerator, place a fruit inside, and close the refrigerator.",
+      "assets-used": [
+        "refrigerator",
+        "apple"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-refrigerator-door",
+        "task-description": "Open the refrigerator door.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-ball",
+        "task-description": "Reach the apple and position the gripper around it.",
+        "assets-used": [
+          "apple"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-refrigerator",
+        "task-description": "Move the apple inside the refrigerator.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-refrigerator-door",
+        "task-description": "Close the refrigerator door.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_17_26/store-condiments-in-fridge_chat_log.txt",
+    "task": {
+      "task-name": "store-condiments-in-fridge",
+      "task-description": "Open the refrigerator door, place the mustard bottle inside, and close the refrigerator door.",
+      "assets-used": [
+        "refrigerator",
+        "mustard_bottle"
+      ],
+      "success-criteria": [
+        "articulated_closed"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-refrigerator-door",
+        "task-description": "Open the refrigerator door.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the mustard bottle and position it between the gripper fingers.",
+        "assets-used": [
+          "mustard_bottle"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-refrigerator",
+        "task-description": "Move the gripper with the mustard bottle to the refrigerator.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-refrigerator-door",
+        "task-description": "Close the refrigerator door.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_19_16/refrigerate-canned-goods_chat_log.txt",
+    "task": {
+      "task-name": "refrigerate-canned-goods",
+      "task-description": "Place a canned good inside the refrigerator and close the door.",
+      "assets-used": [
+        "refrigerator",
+        "tomato_soup_can"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-canned-good",
+        "task-description": "Reach the canned good and position it between the gripper fingers.",
+        "assets-used": [
+          "tomato_soup_can"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-refrigerator",
+        "task-description": "Move the gripper to the refrigerator.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-refrigerator-door",
+        "task-description": "Close the refrigerator door.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_20_36/heat-soup-in-microwave_chat_log.txt",
+    "task": {
+      "task-name": "heat-soup-in-microwave",
+      "task-description": "Place the tomato soup can inside the microwave and close the microwave door.",
+      "assets-used": [
+        "microwave",
+        "tomato_soup_can"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the tomato soup can and make it between the gripper fingers.",
+        "assets-used": [
+          "tomato_soup_can"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the gripper with the tomato soup can into the microwave.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-microwave",
+        "task-description": "Close the microwave door.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_21_56/microwave-meal-prep_chat_log.txt",
+    "task": {
+      "task-name": "microwave-meal-prep",
+      "task-description": "Open the microwave, place the pudding box inside, and close the microwave.",
+      "assets-used": [
+        "microwave",
+        "pudding_box"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "rotate-microwave-door",
+        "task-description": "Open the microwave door.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the pudding box.",
+        "assets-used": [
+          "pudding_box"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Place the pudding box inside the microwave.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-microwave",
+        "task-description": "Close the microwave door.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_23_06/store-gold-in-safe_chat_log.txt",
+    "task": {
+      "task-name": "store-gold-in-safe",
+      "task-description": "Open the safe, place the gold bar inside, and close the safe.",
+      "assets-used": [
+        "safe_rotate",
+        "gold"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the gold bar and make it between the gripper fingers.",
+        "assets-used": [
+          "gold"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "open-safe",
+        "task-description": "Rotate the safe's door to an open position.",
+        "assets-used": [
+          "safe_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "move-into-safe",
+        "task-description": "Move the gripper with the gold bar into the safe.",
+        "assets-used": [
+          "safe_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-safe",
+        "task-description": "Close the safe.",
+        "assets-used": [
+          "safe_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_24_37/secure-tool-in-safe_chat_log.txt",
+    "task": {
+      "task-name": "secure-tool-in-safe",
+      "task-description": "Open the safe, pick up the tool, place it inside, and close the safe.",
+      "assets-used": [
+        "safe_rotate",
+        "power_drill"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-safe",
+        "task-description": "Open the safe's door to an open position.",
+        "assets-used": [
+          "safe_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the power drill and make it between the gripper fingers.",
+        "assets-used": [
+          "power_drill"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-into-safe",
+        "task-description": "Move the gripper into the safe with the power drill.",
+        "assets-used": [
+          "safe_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-safe",
+        "task-description": "Close the safe's door.",
+        "assets-used": [
+          "safe_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_25_40/store-tools-in-box_chat_log.txt",
+    "task": {
+      "task-name": "store-tools-in-box",
+      "task-description": "Open the box, pick up the hammer, place it inside the box, and close the box.",
+      "assets-used": [
+        "box_rotate",
+        "hammer"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box to allow placement of the hammer.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the hammer and make it between the gripper fingers.",
+        "assets-used": [
+          "hammer"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper with the hammer inside the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box after placing the hammer inside.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_26_44/fill-toy-box_chat_log.txt",
+    "task": {
+      "task-name": "fill-toy-box",
+      "task-description": "Open the box, place the toy airplane inside, and close the box.",
+      "assets-used": [
+        "box_rotate",
+        "toy_airplane"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box lid.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the toy airplane and position the gripper near it.",
+        "assets-used": [
+          "toy_airplane"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the toy airplane inside the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box lid.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_27_44/store-pantry-items-in-box_chat_log.txt",
+    "task": {
+      "task-name": "store-pantry-items-in-box",
+      "task-description": "Open the box, place a pantry item inside, and close the box.",
+      "assets-used": [
+        "box_rotate",
+        "cracker_box"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the lid of the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the pantry item and position the gripper around it.",
+        "assets-used": [
+          "cracker_box"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the pantry item inside the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the lid of the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_28_43/pack-suitcase-with-toys_chat_log.txt",
+    "task": {
+      "task-name": "pack-suitcase-with-toys",
+      "task-description": "Open the suitcase, place the toy airplane inside, and close the suitcase.",
+      "assets-used": [
+        "suitcase_rotate",
+        "toy_airplane"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "swing-suitcase-lid-open",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "assets-used": [
+          "toy_airplane"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-suitcase-lid",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_29_39/pack-travel-essentials_chat_log.txt",
+    "task": {
+      "task-name": "pack-travel-essentials",
+      "task-description": "Open the suitcase, place the marker inside, and close the suitcase.",
+      "assets-used": [
+        "suitcase_rotate",
+        "marker"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "swing-suitcase-lid-open",
+        "task-description": "Swing the lid of a suitcase open.",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-thin-object",
+        "task-description": "Reach the marker and make the marker between gripper fingers.",
+        "assets-used": [
+          "marker"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper inside the suitcase.",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-suitcase-lid",
+        "task-description": "Close the lid of a suitcase.",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_30_39/bake-in-oven_chat_log.txt",
+    "task": {
+      "task-name": "bake-in-oven",
+      "task-description": "Place the bowl inside the oven and close the oven door.",
+      "assets-used": [
+        "oven",
+        "bowl"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the bowl and position it between the gripper fingers.",
+        "assets-used": [
+          "bowl"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the gripper with the bowl into the oven.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "push-oven-door",
+        "task-description": "Close the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_31_42/oven-prep_chat_log.txt",
+    "task": {
+      "task-name": "oven-prep",
+      "task-description": "Open the oven, place the pudding box inside, and close the oven.",
+      "assets-used": [
+        "oven",
+        "pudding_box"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "rotate-oven-knob",
+        "task-description": "Open the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the pudding box and make it between gripper fingers.",
+        "assets-used": [
+          "pudding_box"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the gripper with the pudding box inside the oven.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "push-oven-door",
+        "task-description": "Close the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_32_53/load-dishwasher_chat_log.txt",
+    "task": {
+      "task-name": "load-dishwasher",
+      "task-description": "Open the dishwasher door, place the mustard bottle inside, and close the dishwasher door.",
+      "assets-used": [
+        "dishwasher",
+        "mustard_bottle"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "rotate-dishwasher-knob-open",
+        "task-description": "Open the dishwasher door.",
+        "assets-used": [
+          "dishwasher"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the mustard bottle.",
+        "assets-used": [
+          "mustard_bottle"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-dishwasher",
+        "task-description": "Move the mustard bottle into the dishwasher.",
+        "assets-used": [
+          "dishwasher"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-dishwasher",
+        "task-description": "Close the dishwasher door.",
+        "assets-used": [
+          "dishwasher"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_33_58/load-washing-machine_chat_log.txt",
+    "task": {
+      "task-name": "load-washing-machine",
+      "task-description": "Open the washing machine door, place the foam brick inside, and close the washing machine door.",
+      "assets-used": [
+        "washing_machine",
+        "foam_brick"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-washing-machine-door",
+        "task-description": "Open the door of the washing machine.",
+        "assets-used": [
+          "washing_machine"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the foam brick and make it between gripper fingers.",
+        "assets-used": [
+          "foam_brick"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the gripper into the washing machine horizontally.",
+        "assets-used": [
+          "washing_machine"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-dishwasher",
+        "task-description": "Close the washing machine door to a fully closed position.",
+        "assets-used": [
+          "washing_machine"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_35_00/kitchen-cleanup_chat_log.txt",
+    "task": {
+      "task-name": "kitchen-cleanup",
+      "task-description": "Place the mug inside the box and close the box.",
+      "assets-used": [
+        "box_rotate",
+        "mug"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the mug and make the mug between gripper fingers.",
+        "assets-used": [
+          "mug"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper with the mug inside the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_35_56/organize-kitchen-appliances_chat_log.txt",
+    "task": {
+      "task-name": "organize-kitchen-appliances",
+      "task-description": "Open the oven, place the bowl inside, and close the oven.",
+      "assets-used": [
+        "oven",
+        "bowl"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "rotate-oven-knob",
+        "task-description": "Open the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the bowl on the table.",
+        "assets-used": [
+          "bowl"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the bowl inside the oven.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "push-oven-door",
+        "task-description": "Close the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_36_50/secure-and-organize_chat_log.txt",
+    "task": {
+      "task-name": "secure-and-organize",
+      "task-description": "Open the safe, place the gold bar inside, and close the safe.",
+      "assets-used": [
+        "safe_rotate",
+        "gold"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-gold",
+        "task-description": "Reach the gold bar and make the gold bar between gripper fingers.",
+        "assets-used": [
+          "gold"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-into-safe",
+        "task-description": "Move the gripper into the safe.",
+        "assets-used": [
+          "safe_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-safe",
+        "task-description": "Close the safe.",
+        "assets-used": [
+          "safe_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_37_55/morning-routine-prep_chat_log.txt",
+    "task": {
+      "task-name": "morning-routine-prep",
+      "task-description": "Prepare a morning routine setup by pressing the toaster lever and placing the mug next to the toaster.",
+      "assets-used": [
+        "toaster_press",
+        "mug"
+      ],
+      "success-criteria": [
+        "articulated_closed",
+        "distance_gripper_rigidbody"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-toaster",
+        "task-description": "Reach the toaster to prepare for pressing the lever.",
+        "assets-used": [
+          "toaster_press"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "press-toaster-lever"
+      },
+      {
+        "task-name": "reach-mug",
+        "task-description": "Reach the mug to prepare for grasping.",
+        "assets-used": [
+          "mug"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-toaster",
+        "task-description": "Move the mug next to the toaster.",
+        "assets-used": [
+          "toaster_press"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_39_24/tidy-workspace_chat_log.txt",
+    "task": {
+      "task-name": "tidy-workspace",
+      "task-description": "Organize the workspace by placing the marker inside the drawer and closing it.",
+      "assets-used": [
+        "drawer",
+        "marker"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-marker",
+        "task-description": "Reach the marker and make it between the gripper fingers.",
+        "assets-used": [
+          "marker"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper above the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-drawer",
+        "task-description": "Push the drawer to a fully closed position.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_40_21/refrigerate-and-microwave_chat_log.txt",
+    "task": {
+      "task-name": "refrigerate-and-microwave",
+      "task-description": "Place a rigid body object inside the refrigerator, then place another rigid body object inside the microwave.",
+      "assets-used": [
+        "refrigerator",
+        "microwave",
+        "apple",
+        "bowl"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the apple and make the apple between gripper fingers.",
+        "assets-used": [
+          "apple"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "open-refrigerator-door",
+        "task-description": "Open the refrigerator door.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "move-to-refrigerator",
+        "task-description": "Move the gripper above the refrigerator.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-refrigerator-door",
+        "task-description": "Close the refrigerator door.",
+        "assets-used": [
+          "refrigerator"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the bowl and make the bowl between gripper fingers.",
+        "assets-used": [
+          "bowl"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "rotate-microwave-door",
+        "task-description": "Rotate the microwave door open.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "move-to-microwave-horizontal",
+        "task-description": "Move the gripper into the microwave horizontally.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-microwave",
+        "task-description": "Close the microwave door.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_41_32/store-tools-in-box-and-drawer_chat_log.txt",
+    "task": {
+      "task-name": "store-tools-in-box-and-drawer",
+      "task-description": "Open the box, place the hammer inside, close the box, open the drawer, place the power drill inside, and close the drawer.",
+      "assets-used": [
+        "box_rotate",
+        "drawer",
+        "hammer",
+        "power_drill"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box using the revolute joint.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-hammer",
+        "task-description": "Reach the hammer and make it between the gripper fingers.",
+        "assets-used": [
+          "hammer"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper inside the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      },
+      {
+        "task-name": "open-drawer",
+        "task-description": "Open the drawer using the prismatic joint.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-power-drill",
+        "task-description": "Reach the power drill and make it between the gripper fingers.",
+        "assets-used": [
+          "power_drill"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper above the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-drawer",
+        "task-description": "Close the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_42_31/organize-pantry_chat_log.txt",
+    "task": {
+      "task-name": "organize-pantry",
+      "task-description": "Open the box, place the gelatin box inside, and close the box.",
+      "assets-used": [
+        "box_rotate",
+        "gelatin_box"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box lid using the revolute joint.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the gelatin box and make it between the gripper fingers.",
+        "assets-used": [
+          "gelatin_box"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper with the gelatin box inside the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box lid.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_43_30/multi-appliance-kitchen_chat_log.txt",
+    "task": {
+      "task-name": "multi-appliance-kitchen",
+      "task-description": "Open the oven door, place the bowl inside, and close the oven door.",
+      "assets-used": [
+        "oven",
+        "bowl"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "rotate-oven-knob",
+        "task-description": "Open the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the bowl and make it between the gripper fingers.",
+        "assets-used": [
+          "bowl"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the gripper into the oven with the bowl.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "push-oven-door",
+        "task-description": "Close the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_44_29/store-snacks-and-press-toaster_chat_log.txt",
+    "task": {
+      "task-name": "store-snacks-and-press-toaster",
+      "task-description": "Open the box, place the cracker box inside, and press the toaster lever.",
+      "assets-used": [
+        "box_rotate",
+        "cracker_box",
+        "toaster_press"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box to store the cracker box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the cracker box and make it between the gripper fingers.",
+        "assets-used": [
+          "cracker_box"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper with the cracker box inside the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "press-toaster-lever",
+        "task-description": "Press the lever of the toaster down.",
+        "assets-used": [
+          "toaster_press"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_45_37/stapler-and-organize_chat_log.txt",
+    "task": {
+      "task-name": "stapler-and-organize",
+      "task-description": "Use the stapler to simulate stapling and organize a rigid body object by placing it in a designated area.",
+      "assets-used": [
+        "stapler_press",
+        "marker"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-stapler",
+        "task-description": "Reach the stapler and position the gripper above the stapler lever.",
+        "assets-used": [
+          "stapler_press"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "press-stapler-lever",
+        "task-description": "Press the stapler lever to simulate stapling.",
+        "assets-used": [
+          "stapler_press"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      },
+      {
+        "task-name": "reach-marker",
+        "task-description": "Reach the marker and position the gripper to grasp it.",
+        "assets-used": [
+          "marker"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "place-marker",
+        "task-description": "Place the marker in a designated area on the table.",
+        "assets-used": [
+          "marker"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_46_43/open-laptop-and-store_chat_log.txt",
+    "task": {
+      "task-name": "open-laptop-and-store",
+      "task-description": "Open the laptop and place the marker inside the laptop.",
+      "assets-used": [
+        "laptop_rotate",
+        "marker"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-laptop",
+        "task-description": "Open the laptop",
+        "assets-used": [
+          "laptop_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-thin-object",
+        "task-description": "Reach the marker and make the marker between gripper fingers",
+        "assets-used": [
+          "marker"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the gripper to place the marker inside the laptop",
+        "assets-used": [
+          "laptop_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_48_15/faucet-and-organize_chat_log.txt",
+    "task": {
+      "task-name": "faucet-and-organize",
+      "task-description": "Turn on the faucet and place the rigid body object under the running water.",
+      "assets-used": [
+        "faucet",
+        "mug"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "turn-on-faucet",
+        "task-description": "Turn on the faucet to allow water to flow.",
+        "assets-used": [
+          "faucet"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the rigid body object and position the gripper around it.",
+        "assets-used": [
+          "mug"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-under-faucet",
+        "task-description": "Move the rigid body object under the running faucet.",
+        "assets-used": [
+          "faucet"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_49_46/switch-and-store_chat_log.txt",
+    "task": {
+      "task-name": "switch-and-store",
+      "task-description": "Flip the switch on and store the gold bar inside the drawer.",
+      "assets-used": [
+        "switch",
+        "gold"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-switch",
+        "task-description": "Reach the switch and position the gripper for interaction.",
+        "assets-used": [
+          "switch"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "flip-switch-on",
+        "task-description": "Flip the switch to the on position.",
+        "assets-used": [
+          "switch"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-gold",
+        "task-description": "Reach the gold bar and position the gripper for grasping.",
+        "assets-used": [
+          "gold"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper above the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_50_56/pack-sports-bag_chat_log.txt",
+    "task": {
+      "task-name": "pack-sports-bag",
+      "task-description": "Move the bag to a new position on the table, then place the softball inside the bag.",
+      "assets-used": [
+        "bag_move",
+        "softball"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-ball",
+        "task-description": "Reach the softball and make the softball between gripper fingers.",
+        "assets-used": [
+          "softball"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-bag-forward",
+        "task-description": "Move the bag to a new position on the table.",
+        "assets-used": [
+          "bag_move"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_51_55/prepare-travel-bag_chat_log.txt",
+    "task": {
+      "task-name": "prepare-travel-bag",
+      "task-description": "Open the suitcase, place the toy airplane inside, and close the suitcase.",
+      "assets-used": [
+        "suitcase_rotate",
+        "toy_airplane"
+      ],
+      "success-criteria": [
+        "articulated_closed"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "swing-suitcase-lid-open",
+        "task-description": "Swing the lid of the suitcase open.",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the toy airplane and make it between gripper fingers.",
+        "assets-used": [
+          "toy_airplane"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper inside the suitcase.",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-suitcase-lid",
+        "task-description": "Close the lid of the suitcase.",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_52_59/fill-bag-with-food_chat_log.txt",
+    "task": {
+      "task-name": "fill-bag-with-food",
+      "task-description": "Lift the bag and place the apple inside.",
+      "assets-used": [
+        "bag_lift",
+        "apple"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "move-above-bag",
+        "task-description": "Move the gripper above the bag.",
+        "assets-used": [
+          "bag_lift"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "lift-bag",
+        "task-description": "Lift the bag to a predefined height from the table.",
+        "assets-used": [
+          "bag_lift"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the apple and make it between gripper fingers.",
+        "assets-used": [
+          "apple"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-above-bag",
+        "task-description": "Move the gripper with the apple above the lifted bag.",
+        "assets-used": [
+          "bag_lift"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_54_00/full-kitchen-reset_chat_log.txt",
+    "task": {
+      "task-name": "full-kitchen-reset",
+      "task-description": "Open the oven, place the bowl inside, and close the oven.",
+      "assets-used": [
+        "oven",
+        "bowl"
+      ],
+      "success-criteria": [
+        "articulated_closed"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "rotate-oven-knob",
+        "task-description": "Open the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the bowl and make it between gripper fingers.",
+        "assets-used": [
+          "bowl"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the gripper into the oven with the bowl.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "push-oven-door",
+        "task-description": "Close the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_55_25/breakfast-prep-advanced_chat_log.txt",
+    "task": {
+      "task-name": "breakfast-prep-advanced",
+      "task-description": "Prepare a breakfast setup by placing a bowl inside a microwave and closing the door.",
+      "assets-used": [
+        "microwave",
+        "bowl"
+      ],
+      "success-criteria": [
+        "articulated_closed"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the bowl and make the bowl between gripper fingers.",
+        "assets-used": [
+          "bowl"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "rotate-microwave-door",
+        "task-description": "Open the microwave door.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the bowl inside the microwave.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-microwave",
+        "task-description": "Close the microwave door.",
+        "assets-used": [
+          "microwave"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_56_58/office-organization_chat_log.txt",
+    "task": {
+      "task-name": "office-organization",
+      "task-description": "Place the marker inside the drawer and close it.",
+      "assets-used": [
+        "drawer",
+        "marker"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-drawer",
+        "task-description": "Open the drawer to allow placing the marker inside.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-thin-object",
+        "task-description": "Reach the marker and make it between the gripper fingers.",
+        "assets-used": [
+          "marker"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper with the marker to the open drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-drawer",
+        "task-description": "Close the drawer to complete the task.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_58_11/workshop-cleanup_chat_log.txt",
+    "task": {
+      "task-name": "workshop-cleanup",
+      "task-description": "Open the box, place the hammer inside, and close the box.",
+      "assets-used": [
+        "box_rotate",
+        "hammer"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box to allow placement of items inside.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-hammer",
+        "task-description": "Reach the hammer and position it between the gripper fingers.",
+        "assets-used": [
+          "hammer"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper with the hammer inside the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box to secure the hammer inside.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_08_23_59_11/pantry-restock_chat_log.txt",
+    "task": {
+      "task-name": "pantry-restock",
+      "task-description": "Open the box, place the gelatin box inside, and close the box.",
+      "assets-used": [
+        "box_rotate",
+        "gelatin_box"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box to prepare for placing the gelatin box inside.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the gelatin box and position it between the gripper fingers.",
+        "assets-used": [
+          "gelatin_box"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper with the gelatin box inside the open box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box after placing the gelatin box inside.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_09_00_00_23/cooking-prep_chat_log.txt",
+    "task": {
+      "task-name": "cooking-prep",
+      "task-description": "Open the box, place the spatula inside, and close the box.",
+      "assets-used": [
+        "box_rotate",
+        "spatula"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box using its lid.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-thin-object",
+        "task-description": "Reach the spatula and position it between the gripper fingers.",
+        "assets-used": [
+          "spatula"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the spatula inside the open box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box after placing the spatula inside.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_09_00_01_59/travel-packing_chat_log.txt",
+    "task": {
+      "task-name": "travel-packing",
+      "task-description": "Open the suitcase, place the toy airplane inside, and close the suitcase.",
+      "assets-used": [
+        "suitcase_rotate",
+        "toy_airplane"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "swing-suitcase-lid-open",
+        "task-description": "Swing the lid of the suitcase open.",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the toy airplane and make it between the gripper fingers.",
+        "assets-used": [
+          "toy_airplane"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper inside the suitcase.",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-suitcase-lid",
+        "task-description": "Close the lid of the suitcase.",
+        "assets-used": [
+          "suitcase_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_09_00_03_27/grocery-storage_chat_log.txt",
+    "task": {
+      "task-name": "grocery-storage",
+      "task-description": "Open the box, place the food item inside, and close the box.",
+      "assets-used": [
+        "box_rotate",
+        "cracker_box"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box using the gripper.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-cuboid",
+        "task-description": "Reach the cracker box and prepare to grasp it.",
+        "assets-used": [
+          "cracker_box"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the cracker box inside the open box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box to secure the cracker box inside.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_09_00_04_36/tool-organization_chat_log.txt",
+    "task": {
+      "task-name": "tool-organization",
+      "task-description": "Organize a workspace by placing a power drill inside a box and closing the box.",
+      "assets-used": [
+        "box_rotate",
+        "power_drill"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-box",
+        "task-description": "Open the box to place the power drill inside.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the power drill and make it between the gripper fingers.",
+        "assets-used": [
+          "power_drill"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-inside-box",
+        "task-description": "Move the gripper with the power drill inside the box.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-box",
+        "task-description": "Close the box after placing the power drill inside.",
+        "assets-used": [
+          "box_rotate"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_09_00_05_43/household-chores_chat_log.txt",
+    "task": {
+      "task-name": "household-chores",
+      "task-description": "Open the drawer, place the bleach cleanser inside, and close the drawer.",
+      "assets-used": [
+        "drawer",
+        "bleach_cleanser"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "open-drawer",
+        "task-description": "Open the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the bleach cleanser and position it between the gripper fingers.",
+        "assets-used": [
+          "bleach_cleanser"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-drawer",
+        "task-description": "Move the gripper above the drawer to place the bleach cleanser inside.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "distance_gripper_articulated"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "close-drawer",
+        "task-description": "Close the drawer.",
+        "assets-used": [
+          "drawer"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "keypoint_pipeline_longhorizon_bottomup_2026_07_09_00_07_04/meal-prep-station_chat_log.txt",
+    "task": {
+      "task-name": "meal-prep-station",
+      "task-description": "Open the oven, place the bowl inside, and close the oven.",
+      "assets-used": [
+        "oven",
+        "bowl"
+      ]
+    },
+    "subtasks": [
+      {
+        "task-name": "rotate-oven-knob",
+        "task-description": "Open the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_open"
+        ]
+      },
+      {
+        "task-name": "reach-rigid-body",
+        "task-description": "Reach the bowl and make it between the gripper fingers.",
+        "assets-used": [
+          "bowl"
+        ],
+        "success-criteria": [
+          "distance_gripper_rigidbody"
+        ]
+      },
+      {
+        "task-name": "grasp"
+      },
+      {
+        "task-name": "move-to-microwave",
+        "task-description": "Move the bowl inside the oven.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "distance_articulated_rigidbody"
+        ]
+      },
+      {
+        "task-name": "ungrasp"
+      },
+      {
+        "task-name": "push-oven-door",
+        "task-description": "Close the oven door.",
+        "assets-used": [
+          "oven"
+        ],
+        "success-criteria": [
+          "articulated_closed"
+        ]
+      }
+    ]
+  }
+]

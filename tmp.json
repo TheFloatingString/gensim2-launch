@@ -1,0 +1,352 @@
+{
+    "move_mug_into_drawer": {
+        "assets-used": [
+            ["drawer"], ["mug"]
+        ],
+        "task-description": "Open the drawer, pick up the mug, and place it inside the drawer.",
+        "task-name": "move-mug-into-drawer"
+    },
+    "tidy_up_table": {
+        "assets-used": [
+            ["drawer", "box_rotate"], ["golf_ball", "cracker_box"]
+        ],
+        "task-description": "Place the golf ball into the drawer and place the cracker box on top of the box.",
+        "task-name": "tidy-up-table"
+    },
+    "prepare_breakfast": {
+        "assets-used": [
+            ["microwave", "toaster_press"], ["bowl", "steak"]
+        ],
+        "task-description": "Prepare a breakfast scene with a bowl in the microwave and a steak inside the bowl, and the toaster lever pressed.",
+        "task-name": "prepare-breakfast"
+    },
+    "store_soup_in_drawer": {
+        "assets-used": [
+            ["drawer"], ["tomato_soup_can", "tuna_fish_can"]
+        ],
+        "task-description": "Open the drawer, place the tomato soup can and tuna fish can inside, and close the drawer.",
+        "task-name": "store-soup-in-drawer"
+    },
+    "store_cutlery_in_drawer": {
+        "assets-used": [
+            ["drawer"], ["fork", "knife", "spoon"]
+        ],
+        "task-description": "Open the drawer, place the fork, knife, and spoon inside, and close the drawer.",
+        "task-name": "store-cutlery-in-drawer"
+    },
+    "organize_office_drawer": {
+        "assets-used": [
+            ["drawer"], ["marker", "rubiks_cube"]
+        ],
+        "task-description": "Open the drawer, place the marker and Rubik's cube inside, and close the drawer.",
+        "task-name": "organize-office-drawer"
+    },
+    "refrigerate_fruits": {
+        "assets-used": [
+            ["refrigerator"], ["apple", "orange", "peach"]
+        ],
+        "task-description": "Open the refrigerator door, place the apple, orange, and peach inside, and close the refrigerator door.",
+        "task-name": "refrigerate-fruits"
+    },
+    "store_condiments_in_fridge": {
+        "assets-used": [
+            ["refrigerator"], ["mustard_bottle", "mug"]
+        ],
+        "task-description": "Open the refrigerator door, place the mustard bottle and mug inside, and close the refrigerator door.",
+        "task-name": "store-condiments-in-fridge"
+    },
+    "refrigerate_canned_goods": {
+        "assets-used": [
+            ["refrigerator"], ["potted_meat_can", "master_chef_can"]
+        ],
+        "task-description": "Open the refrigerator door, place the potted meat can and master chef can inside, and close the refrigerator door.",
+        "task-name": "refrigerate-canned-goods"
+    },
+    "heat_soup_in_microwave": {
+        "assets-used": [
+            ["microwave"], ["tomato_soup_can"]
+        ],
+        "task-description": "Open the microwave door, place the tomato soup can inside, and close the microwave door.",
+        "task-name": "heat-soup-in-microwave"
+    },
+    "microwave_meal_prep": {
+        "assets-used": [
+            ["microwave"], ["bowl", "cup"]
+        ],
+        "task-description": "Open the microwave door, place the bowl inside the microwave, place the cup inside the bowl, and close the microwave door.",
+        "task-name": "microwave-meal-prep"
+    },
+    "store_gold_in_safe": {
+        "assets-used": [
+            ["safe_rotate"], ["gold"]
+        ],
+        "task-description": "Open the safe, place the gold bar inside, and close the safe.",
+        "task-name": "store-gold-in-safe"
+    },
+    "secure_tool_in_safe": {
+        "assets-used": [
+            ["safe_rotate"], ["power_drill"]
+        ],
+        "task-description": "Open the safe, place the power drill inside, and close the safe.",
+        "task-name": "secure-tool-in-safe"
+    },
+    "store_tools_in_box": {
+        "assets-used": [
+            ["box_rotate"], ["hammer", "power_drill"]
+        ],
+        "task-description": "Open the box, place the hammer and power drill inside, and close the box.",
+        "task-name": "store-tools-in-box"
+    },
+    "fill_toy_box": {
+        "assets-used": [
+            ["box_rotate"], ["toy_airplane", "rubiks_cube", "softball"]
+        ],
+        "task-description": "Open the box, place the toy airplane, Rubik's cube, and softball inside, and close the box.",
+        "task-name": "fill-toy-box"
+    },
+    "store_pantry_items_in_box": {
+        "assets-used": [
+            ["box_rotate"], ["sugar_box", "gelatin_box"]
+        ],
+        "task-description": "Open the box, place the sugar box and gelatin box inside, and close the box.",
+        "task-name": "store-pantry-items-in-box"
+    },
+    "pack_suitcase_with_toys": {
+        "assets-used": [
+            ["suitcase_rotate"], ["toy_airplane", "rubiks_cube"]
+        ],
+        "task-description": "Open the suitcase, place the toy airplane and Rubik's cube inside, and close the suitcase.",
+        "task-name": "pack-suitcase-with-toys"
+    },
+    "pack_travel_essentials": {
+        "assets-used": [
+            ["suitcase_rotate"], ["marker", "gold"]
+        ],
+        "task-description": "Open the suitcase, place the marker and gold bar inside, and close the suitcase.",
+        "task-name": "pack-travel-essentials"
+    },
+    "bake_in_oven": {
+        "assets-used": [
+            ["oven"], ["bowl"]
+        ],
+        "task-description": "Open the oven door, place the bowl inside, and close the oven door.",
+        "task-name": "bake-in-oven"
+    },
+    "oven_prep": {
+        "assets-used": [
+            ["oven"], ["potted_meat_can", "cracker_box"]
+        ],
+        "task-description": "Open the oven door, place the potted meat can and cracker box inside, and close the oven door.",
+        "task-name": "oven-prep"
+    },
+    "load_dishwasher": {
+        "assets-used": [
+            ["dishwasher"], ["bowl", "cup"]
+        ],
+        "task-description": "Open the dishwasher door, place the bowl and cup inside, and close the dishwasher door.",
+        "task-name": "load-dishwasher"
+    },
+    "load_washing_machine": {
+        "assets-used": [
+            ["washing_machine"], ["foam_brick"]
+        ],
+        "task-description": "Open the washing machine door, place the foam brick inside, and close the washing machine door.",
+        "task-name": "load-washing-machine"
+    },
+    "kitchen_cleanup": {
+        "assets-used": [
+            ["refrigerator", "drawer"], ["mustard_bottle", "fork"]
+        ],
+        "task-description": "Place the mustard bottle in the refrigerator and place the fork in the drawer.",
+        "task-name": "kitchen-cleanup"
+    },
+    "organize_kitchen_appliances": {
+        "assets-used": [
+            ["microwave", "refrigerator"], ["bowl", "apple"]
+        ],
+        "task-description": "Open the microwave and place the bowl inside, then open the refrigerator and place the apple inside.",
+        "task-name": "organize-kitchen-appliances"
+    },
+    "secure_and_organize": {
+        "assets-used": [
+            ["safe_rotate", "drawer"], ["gold", "marker"]
+        ],
+        "task-description": "Open the safe, place the gold bar inside, and close the safe, then open the drawer and place the marker inside.",
+        "task-name": "secure-and-organize"
+    },
+    "morning_routine_prep": {
+        "assets-used": [
+            ["toaster_press", "microwave"], ["bowl", "cup"]
+        ],
+        "task-description": "Press the toaster lever down, then open the microwave and place the bowl and cup inside.",
+        "task-name": "morning-routine-prep"
+    },
+    "tidy_workspace": {
+        "assets-used": [
+            ["drawer", "box_rotate"], ["marker", "clamp"]
+        ],
+        "task-description": "Open the drawer and place the marker inside, then open the box and place the clamp inside.",
+        "task-name": "tidy-workspace"
+    },
+    "refrigerate_and_microwave": {
+        "assets-used": [
+            ["refrigerator", "microwave"], ["peach", "tomato_soup_can"]
+        ],
+        "task-description": "Open the refrigerator and place the peach inside, then open the microwave and place the tomato soup can inside.",
+        "task-name": "refrigerate-and-microwave"
+    },
+    "store_tools_in_box_and_drawer": {
+        "assets-used": [
+            ["box_rotate", "drawer"], ["hammer", "power_drill"]
+        ],
+        "task-description": "Open the box and place the hammer inside, then open the drawer and place the power drill inside.",
+        "task-name": "store-tools-in-box-and-drawer"
+    },
+    "organize_pantry": {
+        "assets-used": [
+            ["drawer", "refrigerator"], ["sugar_box", "pudding_box", "orange"]
+        ],
+        "task-description": "Place the sugar box and pudding box into the drawer, then open the refrigerator and place the orange inside.",
+        "task-name": "organize-pantry"
+    },
+    "multi_appliance_kitchen": {
+        "assets-used": [
+            ["microwave", "toaster_press", "refrigerator"], ["bowl", "banana"]
+        ],
+        "task-description": "Open the microwave and place the bowl inside, press the toaster lever down, then open the refrigerator and place the banana inside.",
+        "task-name": "multi-appliance-kitchen"
+    },
+    "store_snacks_and_press_toaster": {
+        "assets-used": [
+            ["drawer", "toaster_press"], ["cracker_box", "gelatin_box"]
+        ],
+        "task-description": "Open the drawer, place the cracker box and gelatin box inside, and close the drawer, then press the toaster lever down.",
+        "task-name": "store-snacks-and-press-toaster"
+    },
+    "stapler_and_organize": {
+        "assets-used": [
+            ["stapler_press", "drawer"], ["marker", "wood_block"]
+        ],
+        "task-description": "Press the stapler lever, then open the drawer and place the marker and wood block inside.",
+        "task-name": "stapler-and-organize"
+    },
+    "open_laptop_and_store": {
+        "assets-used": [
+            ["laptop_rotate", "drawer"], ["marker"]
+        ],
+        "task-description": "Open the laptop, then open the drawer and place the marker inside.",
+        "task-name": "open-laptop-and-store"
+    },
+    "faucet_and_organize": {
+        "assets-used": [
+            ["faucet", "drawer"], ["cup", "bowl"]
+        ],
+        "task-description": "Turn on the faucet, then open the drawer and place the cup and bowl inside.",
+        "task-name": "faucet-and-organize"
+    },
+    "switch_and_store": {
+        "assets-used": [
+            ["switch", "drawer"], ["gold"]
+        ],
+        "task-description": "Flip the switch on, then open the drawer and place the gold bar inside.",
+        "task-name": "switch-and-store"
+    },
+    "pack_sports_bag": {
+        "assets-used": [
+            ["bag_move"], ["golf_ball", "softball"]
+        ],
+        "task-description": "Move the bag to a new position on the table, then place the golf ball and softball inside the bag.",
+        "task-name": "pack-sports-bag"
+    },
+    "prepare_travel_bag": {
+        "assets-used": [
+            ["bag_lift", "suitcase_rotate"], ["toy_airplane", "marker"]
+        ],
+        "task-description": "Open the suitcase and place the toy airplane inside, then lift the bag and place the marker inside the bag.",
+        "task-name": "prepare-travel-bag"
+    },
+    "fill_bag_with_food": {
+        "assets-used": [
+            ["bag_move"], ["apple", "banana", "cracker_box"]
+        ],
+        "task-description": "Move the bag to a new position on the table, then place the apple, banana, and cracker box inside the bag.",
+        "task-name": "fill-bag-with-food"
+    },
+    "full_kitchen_reset": {
+        "assets-used": [
+            ["microwave", "refrigerator", "drawer"], ["bowl", "mug", "fork"]
+        ],
+        "task-description": "Open the microwave and place the bowl inside, open the refrigerator and place the mug inside, then open the drawer and place the fork inside.",
+        "task-name": "full-kitchen-reset"
+    },
+    "breakfast_prep_advanced": {
+        "assets-used": [
+            ["microwave", "toaster_press", "drawer"], ["bowl", "spoon"]
+        ],
+        "task-description": "Open the microwave and place the bowl inside, press the toaster lever down, then open the drawer and place the spoon inside.",
+        "task-name": "breakfast-prep-advanced"
+    },
+    "office_organization": {
+        "assets-used": [
+            ["laptop_rotate", "drawer", "stapler_press"], ["marker", "wood_block"]
+        ],
+        "task-description": "Open the laptop, place the marker and wood block into the drawer, and press the stapler lever.",
+        "task-name": "office-organization"
+    },
+    "workshop_cleanup": {
+        "assets-used": [
+            ["box_rotate", "drawer"], ["hammer", "clamp", "power_drill"]
+        ],
+        "task-description": "Open the box and place the hammer and clamp inside, then open the drawer and place the power drill inside.",
+        "task-name": "workshop-cleanup"
+    },
+    "pantry_restock": {
+        "assets-used": [
+            ["refrigerator", "drawer"], ["tomato_soup_can", "sugar_box", "cracker_box"]
+        ],
+        "task-description": "Open the refrigerator and place the tomato soup can inside, then open the drawer and place the sugar box and cracker box inside.",
+        "task-name": "pantry-restock"
+    },
+    "cooking_prep": {
+        "assets-used": [
+            ["oven", "drawer"], ["bowl", "spatula", "knife"]
+        ],
+        "task-description": "Open the oven and place the bowl inside, then open the drawer and place the spatula and knife inside.",
+        "task-name": "cooking-prep"
+    },
+    "travel_packing": {
+        "assets-used": [
+            ["suitcase_rotate", "bag_move"], ["toy_airplane", "rubiks_cube", "marker"]
+        ],
+        "task-description": "Open the suitcase and place the toy airplane and Rubik's cube inside, then move the bag to a new position and place the marker inside.",
+        "task-name": "travel-packing"
+    },
+    "grocery_storage": {
+        "assets-used": [
+            ["refrigerator", "drawer"], ["apple", "lemon", "mustard_bottle", "fork"]
+        ],
+        "task-description": "Open the refrigerator and place the apple, lemon, and mustard bottle inside, then open the drawer and place the fork inside.",
+        "task-name": "grocery-storage"
+    },
+    "tool_organization": {
+        "assets-used": [
+            ["box_rotate", "safe_rotate"], ["hammer", "gold"]
+        ],
+        "task-description": "Open the box and place the hammer inside and close the box, then open the safe and place the gold bar inside and close the safe.",
+        "task-name": "tool-organization"
+    },
+    "household_chores": {
+        "assets-used": [
+            ["washing_machine", "drawer"], ["foam_brick", "bleach_cleanser"]
+        ],
+        "task-description": "Open the washing machine and place the foam brick inside, then open the drawer and place the bleach cleanser inside.",
+        "task-name": "household-chores"
+    },
+    "meal_prep_station": {
+        "assets-used": [
+            ["oven", "refrigerator", "drawer"], ["bowl", "peach", "spatula"]
+        ],
+        "task-description": "Open the oven and place the bowl inside, open the refrigerator and place the peach inside, and open the drawer and place the spatula inside.",
+        "task-name": "meal-prep-station"
+    }
+}

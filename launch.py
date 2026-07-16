@@ -33,7 +33,8 @@ image = (
         " --index-url https://download.pytorch.org/whl/cu121",
     )
     .run_commands(
-        f"git clone --recursive {REPO_URL} {REPO_DIR}",
+        f"git clone --recursive --branch master {REPO_URL} {REPO_DIR}",
+        f"cd {REPO_DIR} && git checkout d5c6ebc590f6f6088d56fc0c9537ef4ed07f6458",
         f"cd {REPO_DIR} && pip install -e . || true",
     )
     .pip_install(
